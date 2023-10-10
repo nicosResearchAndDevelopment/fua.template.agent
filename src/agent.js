@@ -1,11 +1,12 @@
 const
-    agent    = exports,
-    _package = require('../package.json');
+    agent              = exports,
+    {name: identifier} = require('../package.json'),
+    assert             = require('@nrd/fua.core.assert');
 
-agent.name    = _package.name;
-agent.version = _package.version;
+// TODO implement agent functionality
 
-// TODO
+assert(!global[identifier], 'unable to load a second uncached version of the singleton ' + identifier);
+Object.defineProperty(global, identifier, {value: agent, configurable: false, writable: false, enumerable: false});
 
 Object.freeze(agent);
 module.exports = agent;

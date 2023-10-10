@@ -1,11 +1,14 @@
 {
-  "name": "fua.template.agent",
+  "name": "fua.agent.template",
   "version": "1.0.0",
   "description": "",
   "main": "src/agent.js",
   "files": [
     "src/*"
   ],
+  "dependencies": {
+    "@nrd/fua.core.assert": "^1.0.0"
+  },
   "devDependencies": {
     "expect": "26.x",
     "mocha": "10.x"
