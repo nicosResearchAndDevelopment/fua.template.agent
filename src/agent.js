@@ -7,13 +7,13 @@ assert(!global[identifier], 'unable to load a second uncached version of the sin
 Object.defineProperty(global, identifier, {value: Agent, configurable: false, writable: false, enumerable: false});
 
 const
-    Data = Object.create(null),
-    is   = require('@nrd/fua.core.is');
+    _Agent = Object.create(null),
+    is     = require('@nrd/fua.core.is');
 
 Agent.initialize = async function (options = {}) {
     assert.object(options);
-    assert(!Data.initialized, 'already initialized');
-    Data.initialized = true;
+    assert(!_Agent.initialized, 'already initialized');
+    _Agent.initialized = true;
 
     // TODO implement initializer
 
