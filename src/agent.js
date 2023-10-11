@@ -1,12 +1,26 @@
 const
-    agent              = exports,
+    Agent              = exports,
     {name: identifier} = require('../package.json'),
     assert             = require('@nrd/fua.core.assert');
 
 assert(!global[identifier], 'unable to load a second uncached version of the singleton ' + identifier);
-Object.defineProperty(global, identifier, {value: agent, configurable: false, writable: false, enumerable: false});
+Object.defineProperty(global, identifier, {value: Agent, configurable: false, writable: false, enumerable: false});
 
-// TODO implement agent functionality
+const
+    Data = Object.create(null),
+    is   = require('@nrd/fua.core.is');
 
-Object.freeze(agent);
-module.exports = agent;
+Agent.initialize = async function (options = {}) {
+    assert.object(options);
+    assert(!Data.initialized, 'already initialized');
+    Data.initialized = true;
+
+    // TODO implement initializer
+
+    return Agent;
+};
+
+// TODO implement functionality
+
+Object.freeze(Agent);
+module.exports = Agent;
