@@ -1,14 +1,14 @@
 const
     Agent              = exports,
     {name: identifier} = require('../package.json'),
-    assert             = require('@nrd/fua.core.assert');
+    assert             = require('@fua/core.assert');
 
 assert(!global[identifier], 'unable to load a second uncached version of the singleton ' + identifier);
 Object.defineProperty(global, identifier, {value: Agent, configurable: false, writable: false, enumerable: false});
 
 const
     _Agent = Object.create(null),
-    is     = require('@nrd/fua.core.is');
+    is     = require('@fua/core.is');
 
 Agent.initialize = async function (options = {}) {
     assert.object(options);

@@ -1,1 +1,1 @@
-# @nrd/fua.agent.template
+# @fua/template.agent
