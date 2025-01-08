@@ -4,7 +4,7 @@ const
   agent = require('../src/agent.js'),
   { name: identifier } = require('../package.json');
 
-describe('template.agent', function () {
+describe('agent.TEMPLATE', function () {
 
   test('basics', function () {
     expect(agent).toBeTruthy();
