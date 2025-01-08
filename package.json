@@ -1,5 +1,5 @@
 {
-  "name": "@fua/template.agent",
+  "name": "@fua/agent.TEMPLATE",
   "version": "0.0.0-dev",
   "description": "",
   "main": "src/agent.js",
@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@github.com:nicosResearchAndDevelopment/fua.template.agent.git"
+    "url": "ssh://git@github.com:nicosResearchAndDevelopment/fua.agent.TEMPLATE.git"
   },
   "author": "Simon Petrac <pfoerdie@gmail.com>",
   "license": "MIT"
